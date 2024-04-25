@@ -1,3 +1,10 @@
+import readchar
+from readchar import readkey, key
+import os
+import json
+import csv
+from colorama import Back, Fore, Style, deinit, init
+
 """
 bibliothèques authorisées: os, json, csv, colorama, readchar
 docu colorama: https://he-arc.github.io/livre-python/colorama/index.html
@@ -75,11 +82,28 @@ sorties: aucune
 """
 
 """ TEST COLORAMA:
-from colorama import Back, Fore, Style, deinit, init
+
 init()
 print(Fore.RED + Style.NORMAL + 'Un texte rouge')
 print(Back.BLACK + 'Avec un fond noir')
 print(Style.BRIGHT + 'Plus lumineux !')
 print(Style.RESET_ALL + 'Retour à la normale')
 deinit()
+"""
+
+"""test readchar
+def ReadClavierAcceuil():
+#tant que enter ou "q" n'est pas cliqué on continue à lire les touches du clavier
+#si l'une d'entre elle est cliquée on lance la fonction associée (ouvrir le menu ou alors quitter)
+    while True: 
+      keyPressed = readkey() #lit le clavier
+      if keyPressed == key.ENTER:
+        fonction2()
+        break
+      if keyPressed == "q":
+        fonctionQuitter()
+        break  
+#en modifiant les touches on peut créer une fonction pour le mouvement du joueur:  ‘i’, ‘j’, ‘k’ et ‘l’ ou 
+#touches 8 (haut), 4 (gauche), 5 et 2 (bas), et 6 (droite)
+# exemple: if keyPressed == "i" or keyPressed == "8" ... 
 """
