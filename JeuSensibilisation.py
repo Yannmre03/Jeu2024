@@ -105,5 +105,26 @@ def ReadClavierAcceuil():
         break  
 #en modifiant les touches on peut créer une fonction pour le mouvement du joueur:  ‘i’, ‘j’, ‘k’ et ‘l’ ou 
 #touches 8 (haut), 4 (gauche), 5 et 2 (bas), et 6 (droite)
-# exemple: if keyPressed == "i" or keyPressed == "8" ... 
+# exemple: if keyPressed == "i" or keyPressed == "8": ... 
+"""
+
+"""RE idée de structure: choix à faire
+Deuxième idée de structure: on lance fonction1() et après on lance la fonction suivant à partir de celle la 
+et ainsi de suite donc pas de boucle principale. risque: variables locales et globales dures à gérer, pas de 
+globales que des locales ca peut devenir embrouillant si on fait pas gaffe. 
+exemple: fonction1() # lance la page d'acceuil (à faire) puis dans fonction 1 on lance ReadClavierAcceuil(), 
+                     # qui lance ensuite fonction lancer le menu() qui lance fonction demarrer etc... 
+Première idée donnerait ça: 
+exemple: 
+def fonctionPrincipale(): 
+    réponse1= fonction1() 
+    if réponse1 == "enter":
+        fonction2() #lance menu 
+    else: 
+        fonctionQuitter() #par exemple 
+#réponse1 permet de revenir sur le code principal et gérer quelle fonction va etre lancer après depuis 
+#la fonction principale. C'est comme une variable globale même si elle fait partie de fonctionPrincipale. 
+#Je ne sais pas laquelle sera le mieux, celle ci est plus fastidieuse, répétitive, contient plus de lignes
+#de code et est moins optimisé mais est plus flexible, facile à modifier et à comprendre. 
+        
 """
