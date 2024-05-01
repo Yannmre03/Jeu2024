@@ -4,7 +4,8 @@ import os
 import json
 import csv
 from colorama import Back, Fore, Style, deinit, init
-
+import random
+from random import randint
 """
 bibliothèques authorisées: os, json, csv, colorama, readchar
 docu colorama: https://he-arc.github.io/livre-python/colorama/index.html
@@ -128,3 +129,20 @@ def fonctionPrincipale():
 #de code et est moins optimisé mais est plus flexible, facile à modifier et à comprendre. 
         
 """
+def fonctionPrincipale():
+    pass
+
+
+tailleGrillei = random.randint(9,19)
+tailleGrillej = random.randint(19,39)
+GrilleV1 = [[""]*tailleGrillej for _ in range(tailleGrillei)]
+GrilleV1[random.randint(0,tailleGrillei)][random.randint(0,tailleGrillej)] = "J" #on place le joueur
+
+tailleSituation = int(0.025*tailleGrillej*tailleGrillei)
+placement = [""]
+for i in range(tailleSituation):
+    while True:
+        if GrilleV1[random.randint(0,tailleGrillei):
+def initaliser_grille():
+        ma_grille = [[""]*20 for _ in range(10)]
+        return ma_grille
